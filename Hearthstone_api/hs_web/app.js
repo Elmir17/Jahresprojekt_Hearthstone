@@ -35,13 +35,9 @@ app.get('/v1/:name', (req, res) => {
     }
     else
     if (result.statusCode === 200){
-        //console.log(result.body.name)
         var msg = result.body
         var names = []
         const list = result.body
-
-        //console.log(list[0].name);
-
 
 
         if (list.length === 0) {
@@ -52,14 +48,16 @@ app.get('/v1/:name', (req, res) => {
           }
         }
 
-
         msg = names;
 
         res.send(msg);
         res.end();
+        
       }
     });
 });
+
+
 
 
 app.get('/v1', (req, res) => {
@@ -75,7 +73,6 @@ app.get('/v1', (req, res) => {
     }
     else
     if (result.statusCode === 200){
-      //console.log(result.body.name)
       var msg = result.body
       var names = []
       const list = result.body
@@ -98,12 +95,39 @@ app.get('/v1', (req, res) => {
         });
         */
       }  
+     
+
 
       msg = names;
-
-      res.send(msg);
-      //res.send(names);
-      res.end();
+      var a = 0;
+      names.forEach(p => {
+        a++;
+      })
+      //a schleife, um die länge des arrays herauszufinden --> denn wen ich zuviele angebe kommt 'NaN' und 'undefined' --> darum die abfrage
+      if(a === 6)
+      {
+        res.render('test', {output: msg[0] + msg[1] + "\t || \t" + msg[2] + msg[3] + "\t || \t" + msg[4] + msg[5]});
+      }
+      else if(a === 12)
+      {
+        res.render('test', {output: msg[0] + msg[1] + "\t || \t" + msg[2] + msg[3] + "\t || \t" + msg[4] + msg[5], 
+        output2: msg[6] + msg[7] + "\t || \t" + msg[8] + msg[9] + "\t || \t" + msg[10] + msg[11]});
+      }
+      else if(a === 18)
+      {
+        res.render('test', {output: msg[0] + msg[1] + "\t || \t" + msg[2] + msg[3] + "\t || \t" + msg[4] + msg[5], 
+        output2: msg[6] + msg[7] + "\t || \t" + msg[8] + msg[9] + "\t || \t" + msg[10] + msg[11],
+        output3: msg[12] + msg[13] + "\t || \t" + msg[14] + msg[15] + "\t || \t" + msg[16] + msg[17]});
+      }
+      else
+      {
+        res.render('test', {output: msg[0] + msg[1] + "\t || \t" + msg[2] + msg[3] + "\t || \t" + msg[4] + msg[5], 
+        output2: msg[6] + msg[7] + "\t || \t" + msg[8] + msg[9] + "\t || \t" + msg[10] + msg[11],
+        output3: msg[12] + msg[13] + "\t || \t" + msg[14] + msg[15] + "\t || \t" + msg[16] + msg[17],
+        output4: msg[18] + msg[19] + "\t || \t" + msg[20] + msg[21] + "\t || \t" + msg[22] + msg[23]});
+      }
+      
+      
     }
   });
 
