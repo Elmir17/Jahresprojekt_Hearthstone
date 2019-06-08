@@ -2,15 +2,21 @@ doctype html
 html
   head
     title HS-Kartensuche
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='../public/stylesheets/style.css')
   body.
     
     <h1>Hearthstone-Kartensuche</h1><br>
-    <h3>Geben sie im unteren Textfeld die Karte ein, die Sie suchen </h3><br>
+    <h3>Geben sie im unteren Textfeld die Karte ein, die Sie suchen (sollte bei "Beschreibung" undefined stehen, handelt es sich um eine Waffe)</h3><br>
     <form action = "/v1">
       Karten Suche: <br>
       <input id="myInput" type="text" name="name"> <br><br>
       <button id="myButton" onClick="myFunction()">Suche</button>
-      <p id="demo">Testeingaben : Ysera, Acidmaw, Acolyte of Pain, Air Elemental, Animal Companion</p>
+      <p>Testeingaben : Ysera, Acidmaw, Acolyte of Pain, Air Elemental, Animal Companion</p><br><br><br>
+    </form>
+    <form action = "/v2">
+    <h3>Geben sie im unteren Textfeld die Klasse ein, von der Sie Karten sehen wollen (sollte bei "Beschreibung" undefined stehen, handelt es sich um eine Waffe)</h3><br>
+      <input id="myInput2" type="text2" name="name2"> <br><br>
+      <button id="myButton2" onClick="myFunction2()">Suche</button>
+      <p>Testeingaben : Mage, Paladin, Warrior, Warlock</p>
     </form>
   </body>
