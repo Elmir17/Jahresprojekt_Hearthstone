@@ -1,0 +1,19 @@
+body {
+  padding: 20px;
+  font: 14px Arial;
+}
+
+h1
+{
+  font: 50px Arial;
+}
+
+input
+{
+  background-color: aquamarine;
+}
+
+p
+{
+  color: mediumseagreen;
+}
