@@ -1,0 +1,17 @@
+Feedback:
+
+Prinzipiell finde ich es toll, dass ihr versucht habt euch selbst in etwas einzulesen.
+
+Offenbar habt ihr den express-generator entdeckt und angewandt.
+
+Die users-Route vom express-generator hättet ihr noch entfernen müssen.
+Ich kann bei euch die folgende URL eingeben und bekomme eine Response:
+http://localhost:3001/users
+
+Der NodeJS client ist ziemlich spärlich. Dafür habt ihr aber jade in der HTML Variante verwendet.
+
+Alles in allem in schönes Projekt!
+
+Hättet ihr noch die MongoDB eingebunden, wäre es ein 'Sehr gut (1)' geworden.
+
+Beurteilung: Gut (2)
